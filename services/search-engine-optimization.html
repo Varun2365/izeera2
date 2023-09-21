@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iZEERA - SEO</title>
+    <link rel="stylesheet" href="web-style.css">
+    <link rel="stylesheet" href="service-responsive.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="../tree.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css"> -->
+</head>
+
+<body>
+    <div class="mobile-menu" id="ham">
+        <div class="cross"><button class="cross-btn" onclick="hideMenu()"></button></div>
+        <div class="mobile-links">
+            <ul>
+
+
+                <a href="../index.html" onclick="hideMenu()">
+                    <li>HOME</li>
+                </a>
+                <a href="../blogs/blog-main.html" onclick="hideMenu()">
+                    <li>BLOGS</li>
+                </a>
+                <a href="../pages/about.html" onclick="hideMenu()">
+                    <li>ABOUT US</li>
+                </a>
+                <!-- <a href="#" onclick="hideMenu()">
+                    <li>ABOUT US</li>
+                </a>
+                <a href="#contact" onclick="hideMenu()">
+                    <li>CONTACT</li>
+                </a> -->
+
+
+            </ul>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="main-nav">
+
+            <nav class="left"></nav>
+            <nav class="right">
+                <ul>
+                    <li><a href="../index.html"> HOME</a></li>
+                    <li><a href="../blogs/blog-main.html">BLOGS</a></li>
+                    <li><a href="../pages/about.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+            <nav class="ham" onclick="showMenu()">
+                <!-- <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">BLOGS</a></li>
+                <li><a href="">ABOUT US</a></li>
+            </ul> -->
+            </nav>
+        </div>
+    </nav>
+    <div class="main-body">
+        <div class="hero">
+            <div class="hero-left">
+                <h4 class="first">SEO</h4>
+                <h3 class="first">Which is the practice of increasing the quantity and quality of traffic to your website through
+                    organic search engine results.</h3>
+                <div class="first">
+                    <a href="../hire/hire-contact.html" target="_blank"><button class="button" class="first">PLACE ORDER</button></a>
+
+                </div>
+            </div>
+            <div class="hero-right first" style="background-image: url(../services/images/seo.svg)"></div>
+        </div>
+        <div class="web">
+            <div class="second">
+
+                <h2 class="head" class="second">What is SEO?</h2>
+            </div>
+            <p class="second">You can attract all the visitors in the world, but if they're coming to your site because Google tells
+                them you're a resource for Apple computers when really you're a farmer selling apples, that is not
+                quality traffic. Instead you want to attract visitors who are genuinely interested in products that you
+                offer.</p>
+            <p class="second">To know more, Read <a href="../blogs/blog-main.html" target="_blank">OUR BLOG</a> </p>
+        </div>
+        <div class="offer">
+            <h6 class="third">What Do We Serve?</h6>
+            <h3 class="offer-head third">A strategy and a broad spectrum of creative brand marketing services in the digital world.</h3>
+            <div class="holder">
+                <div class="card third">
+                    <h5>Email Marketing</h5>
+                    <h5>ASO</h5>
+                    <h5>Content Marketing</h5>
+                </div>
+                <div class="card third">
+                    <h5>SEO</h5>
+                    <h5>SMO</h5>
+                    <h5>SMM</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="quote">
+        <h1 class="third">Let’s create a measurable
+            impact on your business.</h1>
+        <div class="third">
+
+            <a href="../hire/hire-contact.html" target="_blank"><button class="quote-btn">Quote Now!</button></a>
+        </div>
+    </div>
+    <script>
+        function getHeight() {
+
+            divElement = document.querySelector(".hero-left");
+
+            elemHeight = divElement.offsetHeight;
+
+            return elemHeight + "px"
+        }
+        document.querySelector(".hero-right").style.height = getHeight();
+
+
+        var ham = document.getElementById("ham")
+        function showMenu() {
+            ham.style.display = "flex";
+            setTimeout(() => {
+
+                ham.style.transform = 'translateX(0)';
+            }, 200);
+        }
+        function hideMenu() {
+            ham.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                ham.style.display = "none";
+            }, 200);
+        }
+
+
+
+        ScrollReveal({
+        reset: false,
+        distance: '20px',
+        duration: 1000,
+        delay: 400  
+        })
+        ScrollReveal().reveal('.nav')
+        ScrollReveal().reveal('.first',{delay:100,interval: 300,duration: 2000})
+        ScrollReveal().reveal('.second',{delay:100,interval: 300,duration: 2000})
+        ScrollReveal().reveal('.third',{delay:100,interval: 300,duration: 2000})
+        ScrollReveal().reveal('.hero-rights')
+    </script>
+</body>
+
+</html>

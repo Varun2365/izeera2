@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+</head>
+<body>
+    <div class="ham-menu" id="ham">
+        <div class="cross" onclick="hideMenu()">
+            <div class="crossimg"></div>
+        </div>
+        <div class="links">
+            <ul>
+
+                <a href="#" onclick="hideMenu()"><li>HOME</li></a>
+                <a href="#" onclick="hideMenu()"><li>ABOUT</li></a>
+                <a href="#" onclick="hideMenu()"><li>BLOG</li></a>
+                <!-- <a href="" id="button"><button class="contact-btn">HIRE US</button></a> -->
+
+                
+            </ul>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="nav-left-logo"></div>
+        <div class="nav-right-links">
+            <ul>
+                <a href=""><li>HOME</li></a>
+                <a href=""><li>ABOUT</li></a>
+                <a href=""><li>BLOG</li></a>
+                <a href="" id="button"><button class="contact-btn">HIRE US</button></a>
+            </ul>
+        </div>
+        <div class="ham" onclick="showMenu()"></div>
+    </nav>
+    <script>
+        var ham = document.getElementById("ham");
+        function showMenu(){
+            ham.style.transform = "translateX(0)";
+        }
+        function hideMenu(){
+            ham.style.transform = "translateX(100%)"
+        }
+    </script>
+</body>
+</html>

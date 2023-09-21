@@ -1,0 +1,329 @@
+<head>
+    <link rel="stylesheet" href="../fonts/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+    height: 11vh;
+    width: 100%;
+    overflow: hidden;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgb(250, 250, 250);
+     background-color: white;
+     position: fixed;
+     top: 0;
+     backdrop-filter: blur(40px);
+     padding:0 8rem;
+     /* border-bottom: 2px solid rgba(128, 128, 128, 0.137); */
+     z-index: 1000;
+     /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.247);
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 3px; */
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+     overflow: hidden;
+ }
+ nav h2{
+    font-weight: 500;
+    color: #182f2c;
+    letter-spacing: 2px;
+    font-size: 1.78rem;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+nav li{
+    font-size: 1.2rem;
+    color: #7a7e83;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: 'Roboto';
+    font-family: 'Open Sans', sans-serif;
+
+}
+nav a{
+    text-decoration: none;
+    margin: 0 2rem;
+}
+nav li:hover{
+    color: #182f2c;
+    transform: translateY(-3px);
+}
+li::after{
+
+    content: '';
+    width: 0;
+    height: 3px ;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 3px;
+}
+nav a:hover li::after{
+    width: 100%;
+}
+
+button{
+    padding: 01rem 2.6rem;
+    border: none;
+    color: white;
+    background-color: #182f2c;
+    margin-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+nav button:hover{
+    background-color: #0c1816;
+    cursor: pointer;
+    animation: jump 0.3s ease-in-out;
+    scale: 1.01;
+
+}
+.mobile{
+    display: none;
+    margin-bottom: 3rem;
+}
+#click{
+    font-weight: 300;
+    font-family: 'Open Sans';
+}
+.ham{
+    height: 3rem;
+    width: 6rem;
+    display: none;
+    background-image: url(../assets/svg/ham.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mobile-menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #0c1816;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100000;
+}
+.mobile-links ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.mobile-links{
+    padding-top: 6rem;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+.mobile-links a{
+    width: 120%;
+    text-align: center;
+    color: white;
+    padding: 2rem 4rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.8rem;
+    font-family: 'Jost';
+}
+.mobile-links li{
+
+}
+.mobile-links a:hover{
+    background-color: #000000;
+}
+#ham{
+    /* display: none; */
+    transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
+}
+.cross
+{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.cross-btn{
+    background-image: url(../assets/svg/cross.svg);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    height: 2rem;
+}
+.logo{
+    height: 100%;
+    width: 100px;
+    background-image: url(../assets/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    scale: 1.2;
+    animation: float 4s infinite ease-in-out;
+}
+button{
+    padding: 01rem 2.6rem;
+    border: none;
+    color: white;
+    background-color: #182f2c;
+    margin-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+nav button:hover{
+    background-color: #0c1816;
+    cursor: pointer;
+    animation: jump 0.3s ease-in-out;
+    scale: 1.01;
+
+}
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 13 px;
+    }
+    .links{
+        display: none;
+    }
+    .ham{
+        display: block;
+    }
+    nav{
+        height: 7vh;
+        padding: 0 3rem;
+    }
+    .nav{
+        background-color:#0d1a18d2;
+        backdrop-filter: blur(10px);
+    }
+    .nav h2{
+        color:  white;
+    
+    }
+}
+    @media screen and (max-width: 1280px) {
+    html{
+        font-size: 13px;
+    }
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-4px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes jump{
+    0%,100%{
+        transform: translateY(0);
+        /* scale: 1; */
+    }
+    20%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(-3px);
+        /* scale: 1.001; */
+    }
+    80%{
+        transform: translateY(1.5px);
+    }
+}
+
+</style>
+<div class="mobile-menu" id="ham">
+    <div class="cross"><button class="cross-btn" onclick="hideMenu()"></button></div>
+    <div class="mobile-links">
+        <ul>
+
+<!-- 
+            <a href="#" onclick="hideMenu()">
+                <li>CASES</li>
+            </a> -->
+            <a href="#services" onclick="hideMenu()">
+                <li>SERVICES</li>
+            </a>
+            <a href="#" onclick="hideMenu()">
+                <li>BLOG</li>
+            </a>
+            <a href="#" onclick="hideMenu()">
+                <li>ABOUT US</li>
+            </a>
+            <a href="#contact" onclick="hideMenu()">
+                <li>CONTACT</li>
+            </a>
+
+
+        </ul>
+    </div>
+</div>
+<nav class="nav">
+    <div class="logo">
+        <!-- <h2>iZEERA</h2> -->
+    </div>
+    <div class="links">
+        <UL>
+            <!-- <a href="#">
+                <li>CASES</li>
+            </a> -->
+            <a href="#services">
+                <li>SERVICES</li>
+            </a>
+            <a href="#">
+                <li>BLOG</li>
+            </a>
+            <a href="pages/about.html" target="_blank">
+                <li>ABOUT US</li>
+            </a>
+            <a href="#contact">
+                <li>CONTACT</li>
+            </a>
+            <a href="#"><button>HIRE US</button></a>
+        </UL>
+    </div>
+    <div class="ham" onclick="showMenu()"></div>
+</nav>
+<script>
+            var ham = document.getElementById("ham")
+        function showMenu() {
+            ham.style.display = "flex";
+            setTimeout(() => {
+
+                ham.style.transform = 'translateX(0)';
+            }, 200);
+        }
+        function hideMenu() {
+            ham.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                ham.style.display = "none";
+            }, 200);
+        }
+</script>

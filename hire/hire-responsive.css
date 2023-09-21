@@ -1,0 +1,56 @@
+@media only screen and (max-width: 1160px){
+    .form-right{
+        display: none;
+    }
+    body{
+        background-color: #0d1a18;
+    }
+    .contact-form{
+        height: 100vh;
+        border-radius: 0x;
+        width: 100%;
+    }
+    .form-left{
+        width: 100%;
+        align-items: center;
+        height: auto;
+        /* background-color: yellow; */
+        padding: 10rem 4rem;
+        border-radius: none;
+    }
+    form{
+        width: 100%;
+        /* background-color: yellow; */
+        align-items: center;
+    }
+    .btn-sec{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .submit-btn{
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 760px){
+    input{
+        width: 100%;
+    }
+    .selector{
+        width: 100%;
+        justify-content: center;
+
+    }
+    .btn-sec{
+        /* background-color: yellow; */
+    }
+    html{
+
+        font-size: 12px;
+    }
+    #w3review{
+        width: 100%;
+    }
+}

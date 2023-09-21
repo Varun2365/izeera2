@@ -1,0 +1,152 @@
+@media screen and (max-width: 1500px){
+    .padding{
+        padding: 0 5rem;
+    }
+    html{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1300px){
+    html{
+        font-size: 15px;
+    }
+    .journey-right{
+        width: 40%;
+    }
+    footer{
+        height: auto;
+        /* padding: 0 0 0 3rem;
+        box-sizing: border-box;
+        width: 100%; */
+    }
+    .footer-right{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        padding: 0;
+    }
+    .footer-card{
+        justify-content: center;
+        margin: 2rem 0;
+        width: 80%;
+        align-items: start;
+        max-width: none;
+        text-align: center;
+        padding: 0 0 0 5rem;
+    }
+}
+@media screen and (max-width: 1130px){
+.journey{
+    flex-direction: column;
+}
+.journey-left{
+    width: 100%;
+}
+.journey-right{
+    width: 100%;
+    height: 30vh;
+    background-position: left;
+    margin-top: 2rem;
+}.reverse{
+    flex-direction: column;
+}
+.imgrev{
+    background-position: right;
+    margin-top: 2rem;
+}
+.milestones{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 3rem;
+}
+.left-mile{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.right-mile{
+    height: 30vh;
+    width: 100%;
+    background-position: center center;
+    /* background-color: yellow; */
+    padding: none;
+
+    background-size: contain;
+}
+.contact{
+    flex-direction: column;
+    margin-bottom: 5rem;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+.contact-right{
+    align-items: center;
+    width: 90%;
+}
+form{
+    align-items: center;
+}
+form input, form textarea{
+    width: 100%;
+}
+.contact-left{
+    width: 90%;
+    text-align: center;
+    /* background-color: cyan; */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: auto;
+}
+.contact h4{
+    width: 100%;
+    text-align: justify;
+}
+.contact h1{
+    text-align: left;
+}
+.feel{
+    font-size: 20px;
+    text-align: center;
+}
+.button-div{
+    align-items: center;
+    justify-content: center;
+}
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 11px;
+    }
+    .ham{
+        height: 30px;
+    }
+    .journey{
+        justify-content: center;
+    }
+    .journey-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* background-color: yellow; */
+    }
+    .journey-right{
+        justify-content: center;
+        background-position: center;
+        /* background-color: red; */
+    }
+
+}
+@media screen and (max-width: 530px){
+    .hr{
+        width: 300px;
+    }
+    .ham{
+        height: 20px;
+    }
+}

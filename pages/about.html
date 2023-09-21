@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iZEERA - About</title>
+    <link rel="stylesheet" href="css/about-style.css">
+    <link rel="stylesheet" href="css/about-responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="../tree.png" type="image/x-icon">
+    
+    <!-- <link rel="stylesheet" href="../services/web-style.css">
+    <link rel="stylesheet" href="../services/service-responsive.css"> -->
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        nav{
+        height: 11vh;
+        width: 100%;
+        overflow: hidden;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: rgb(250, 250, 250);
+         background-color: white;
+         position: fixed;
+         top: 0;
+         backdrop-filter: blur(40px);
+         padding:0 8rem;
+         /* border-bottom: 2px solid rgba(128, 128, 128, 0.137); */
+         z-index: 1000;
+         /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.247);
+         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 3px; */
+         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+         overflow: hidden;
+     }
+     nav h2{
+        font-weight: 500;
+        color: #182f2c;
+        letter-spacing: 2px;
+        font-size: 1.78rem;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    nav li{
+        font-size: 1.2rem;
+        color: #7a7e83;
+        transition: all 0.2s ease-in-out;
+        font-weight: 500;
+        font-family: 'Roboto';
+        font-family: 'Open Sans', sans-serif;
+    
+    }
+    nav a{
+        text-decoration: none;
+        margin: 0 2rem;
+    }
+    nav li:hover{
+        color: #182f2c;
+        transform: translateY(-3px);
+    }
+    li::after{
+    
+        content: '';
+        width: 0;
+        height: 3px ;
+        background-color: green;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        transition: all 0.3s ease-in-out;
+        margin-top: 3px;
+    }
+    nav a:hover li::after{
+        width: 100%;
+    }
+    
+    button{
+        padding: 01rem 2.6rem;
+        border: none;
+        color: white;
+        background-color: #182f2c;
+        margin-left: 1rem;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+    }
+    nav button:hover{
+        background-color: #0c1816;
+        cursor: pointer;
+        animation: jump 0.3s ease-in-out;
+        scale: 1.01;
+    
+    }
+    .mobile{
+        display: none;
+        margin-bottom: 3rem;
+    }
+    #click{
+        font-weight: 300;
+        font-family: 'Open Sans';
+    }
+    .ham{
+        height: 3rem;
+        width: 6rem;
+        display: none;
+        background-image: url(../assets/svg/ham.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .mobile-menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #0c1816;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 100000;
+    }
+    .mobile-links ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+    }
+    .mobile-links{
+        padding-top: 6rem;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+    }
+    .mobile-links a{
+        width: 120%;
+        text-align: center;
+        color: white;
+        padding: 2rem 4rem;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        font-size: 1.8rem;
+        font-family: 'Jost';
+    }
+    .mobile-links li{
+    
+    }
+    .mobile-links a:hover{
+        background-color: #000000;
+    }
+    #ham{
+        /* display: none; */
+        transform: translateX(100%);
+        transition: all 0.2s ease-in-out;
+    }
+    .cross
+    {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .cross-btn{
+        background-image: url(../assets/svg/cross.svg);
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20%;
+        height: 2rem;
+    }
+    .logo{
+        height: 100%;
+        width: 100px;
+        background-image: url(../assets/logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center left;
+        scale: 1.2;
+        animation: float 4s infinite ease-in-out;
+    }
+    button{
+        padding: 01rem 2.6rem;
+        border: none;
+        color: white;
+        background-color: #182f2c;
+        margin-left: 1rem;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+    }
+    nav button:hover{
+        background-color: #0c1816;
+        cursor: pointer;
+        animation: jump 0.3s ease-in-out;
+        scale: 1.01;
+    
+    }
+    @media screen and (max-width: 1200px) {
+        html{
+            font-size: 13 px;
+        }
+        .links{
+            display: none;
+        }
+        .ham{
+            display: block;
+        }
+        nav{
+            height: 7vh;
+            padding: 0 3rem;
+        }
+        .nav{
+            background-color:#0d1a18d2;
+            backdrop-filter: blur(10px);
+        }
+        .nav h2{
+            color:  white;
+        
+        }
+    }
+        @media screen and (max-width: 1280px) {
+        html{
+            font-size: 13px;
+        }
+    }
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-4px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+    @keyframes jump{
+        0%,100%{
+            transform: translateY(0);
+            /* scale: 1; */
+        }
+        20%{
+            transform: translateY(-2px);
+        }
+        50%{
+            transform: translateY(-3px);
+            /* scale: 1.001; */
+        }
+        80%{
+            transform: translateY(1.5px);
+        }
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="mobile-menu" id="ham">
+        <div class="cross"><button class="cross-btn" onclick="hideMenu()"></button></div>
+        <div class="mobile-links">
+            <ul>
+    
+    <!-- 
+                <a href="#" onclick="hideMenu()">
+                    <li>CASES</li>
+                </a> -->
+                <a href="../index.html#services" onclick="hideMenu()">
+                    <li>SERVICES</li>
+                </a>
+                <a href="../blogs/blog-main.html" onclick="hideMenu()">
+                    <li>BLOG</li>
+                </a>
+                <!-- <a href="#" onclick="hideMenu()">
+                    <li>ABOUT US</li>
+                </a> -->
+                <a href="#contact" onclick="hideMenu()">
+                    <li>CONTACT</li>
+                </a>
+    
+    
+            </ul>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="logo">
+            <!-- <h2>iZEERA</h2> -->
+        </div>
+        <div class="links">
+            <UL>
+                <!-- <a href="#">
+                    <li>CASES</li>
+                </a> -->
+                <a href="../index.html#services">
+                    <li>SERVICES</li>
+                </a>
+                <a href="../blogs/blog-main.html">
+                    <li>BLOG</li>
+                </a>
+                <!-- <a href="pages/about.html" target="_blank">
+                    <li>ABOUT US</li>
+                </a> -->
+                <a href="#contact">
+                    <li>CONTACT</li>
+                </a>
+                <a href="../hire/hire-contact.html"><button>HIRE US</button></a>
+            </UL>
+        </div>
+        <div class="ham" onclick="showMenu()"></div>
+    </nav>
+    <script>
+                var ham = document.getElementById("ham")
+            function showMenu() {
+                ham.style.display = "flex";
+                setTimeout(() => {
+    
+                    ham.style.transform = 'translateX(0)';
+                }, 200);
+            }
+            function hideMenu() {
+                ham.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    ham.style.display = "none";
+                }, 200);
+            }
+    </script>
+    <!-- <div class="hero">
+        <h1 class="h1">About Us</h1>
+    </div>  -->
+    <div class="padding">
+
+        <div class="journey">
+            <div class="journey-left">
+            <h2 class="h2 journeyh">The Early Days</h2>
+            <div class="hr headhr"></div>
+            <p class="p">The inception of Izeera wasn't marked by grand offices or vast teams. Instead, it was shaped by
+                long brainstorming sessions, fueled by passion, dedication, and the vision of revolutionizing the
+                web sphere. The initial challenges were many — the path unchartered, the competition fierce. But
+                every hurdle only strengthened our resolve.
+                As we took our first steps, we realized the dynamic nature of the digital space. We quickly
+                adapted, ensuring that our strategies and services always remained a cut above the rest. Each
+                completed project became a testament to our craftsmanship, attention to detail, and
+                commitment.</p>
+            </div>
+        <div class="journey-right">
+        </div>
+    </div>
+    <div class="journey reverse">
+        <div class="journey-left rev">
+            <h2 class="h2 journeyh">Evolving & Expanding</h2>
+            <div class="hr headhr reversehr"></div>
+            <p class="p reversep">
+                Over time, Izeera has flourished, not just in numbers but in expertise and experience. Our expansion has
+                brought a myriad of services, tools, and technologies under our umbrella. Projects have become diverse,
+                challenges intricate, and solutions innovative. This growth has transformed us into a dynamic force in
+                our industry, where our seasoned experts collaborate seamlessly with emerging talents. Our commitment to
+                excellence remains steadfast as we navigate an ever-evolving landscape. Izeera stands as a trusted
+                partner, ready to embrace new challenges and opportunities, fueled by a relentless passion for progress
+                and innovation.</p>
+                <button class="button">Get in touch</button>
+            </div>
+            <div class="journey-right imgrev grow">
+            </div>
+        </div>
+        <div class="journey">
+            <div class="journey-left">
+                <h2 class="h2 journeyh">Our Defining Purpose & Vision</h2>
+                <div class="hr headhr"></div>
+                <p class="p">
+                    The engine that propels Izeera towards success is an unwavering commitment to excellence. We firmly
+                    believe that every venture, regardless of its scale, can thrive with the right digital tools and
+                    strategies. Our mission is to empower businesses, whether they are budding startups or established
+                    giants, with the technological prowess they require to not just survive but to excel in today's dynamic
+                    landscape. We are driven by the relentless pursuit of innovation, constantly pushing boundaries, and
+                    setting new standards in digital solutions. At Izeera, we don't just provide services; we are catalysts
+                    for transformation, guiding businesses towards their full potential through a synergy of cutting-edge
+                    technology and unwavering dedication to excellence.</p>
+                </div>
+        <div class="journey-right vision">
+        </div>
+    </div>
+    <div class="journey reverse">
+        <div class="journey-left rev">
+            <h2 class="h2 journeyh">Our Philosophy</h2>
+            <div class="hr headhr reversehr"></div>
+            <p class="p reversep">
+                In the rapidly changing landscape of the digital realm, standing still is tantamount to regression. This
+                is why innovation is the lifeblood of our organization. We are more than just service providers; we are
+                dedicated digital partners who wholeheartedly embrace the aspirations and ambitions of our clients. We
+                understand that success in the digital ecosystem demands agility, adaptability, and a forward-thinking
+                approach. Hence, we continuously strive to push the boundaries of what's possible, pioneering new
+                solutions, and staying ahead of the curve. Our unwavering commitment to innovation fuels our passion for
+                delivering transformative results, enabling our clients to not just keep pace with change but to lead
+                and thrive in the digital age.</p>
+                <button class="button">Get in touch</button>
+            </div>
+            <div class="journey-right imgrev philos">
+            </div>
+        </div>
+    </div>
+        <div class="offerings">
+            <div class="offer-heading"><h2>Our Distinct Offerings</h2></div>
+            <div class="offerings-card-section">
+                <div class="offerings-card">
+                    <!-- <div class="card-left"></div> -->
+                    <div class="card-right">
+
+                        <div class="card-heading">Bespoke Web Development</div>
+                        <div class="card-para">The digital age requires businesses to have a distinct voice. We craft bespoke websites, ensuring 
+                            every element resonates with the brand’s ethos.</div>
+                        <button class="button offer"><b>Hire Now!</b> </button>
+                        </div>
+                </div>
+                <div class="offerings-card">
+                    <!-- <div class="card-left"></div> -->
+                    <div class="card-right">
+
+                        <div class="card-heading">Cutting Edge UI/UX Design</div>
+                        <div class="card-para">Our design philosophy is rooted in empathy. We delve deep into user psyches, understanding 
+                            their needs, preferences, and pain points. This insight drives our design decisions, ensuring every 
+                            interface is intuitive, engaging, and delightful.</div>
+                        <button class="button offer"><b>Hire Now!</b> </button>
+                        </div>
+                </div>
+                <div class="offerings-card">
+                    <!-- <div class="card-left"></div> -->
+                    <div class="card-right">
+
+                        <div class="card-heading">Strategic SEO Services</div>
+                        <div class="card-para">The digital age requires businesses to have a distinct voice. We craft bespoke websites, ensuring 
+                            every element resonates with the brand’s ethos.</div>
+                        <button class="button offer"><b>Hire Now!</b> </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <h1>What our clients say!</h1>
+            <div class="testimonial-wrapper">
+                <div class="test-card">
+    
+                    <div class="test-para">"Ever since I chose iZEERA for developing my website. I've seen my online
+                        presence improve significantly. They truly understand the needs of a local business."</div>
+                    <div class="test-footer-wrapper">
+                        <div class="test-img"></div>
+                        <div class="tfooter-right">
+                            <div class="name">John Doe, Business owner</div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card">
+    
+                    <div class="test-para">iZeera's Full Cycle Website Designing services have brought a creative twist to
+                        our brand.
+                        They have highly skilled team that interpreted out vision perfectly.</div>
+                    <div class="test-footer-wrapper">
+                        <div class="test-img jane"></div>
+                        <div class="tfooter-right">
+                            <div class="name">Jane Smith, Startup Founder</div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card">
+    
+                    <div class="test-para">"SEO was a foreign concept to me till I met the guys at iZEERA. They worked magic
+                        on my site's visibility and the leads have been pouring in!""</div>
+                    <div class="test-footer-wrapper">
+                        <div class="test-img tim"></div>
+                        <div class="tfooter-right">
+                            <div class="name">Tim Brown, Entrepreneur</div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="milestones">
+            <h1>Milestones & Recognitions</h1>
+            <div class="mile-wrapper">
+
+                <div class="left-mile">
+                    
+                <h2>Our Journey, Our Achievements</h2>
+            <p>Every year at iZeera has been marked by growth, learning, and accomplishments</p>
+            <ul>
+                <li>The launch of 100+ websites, each a testament to our expertise</li>
+                <li>Awards and recognitions from industry stalwarts for our innovative designs.</li>
+                <li>Long-term associations with global giants, highlighting our consistent performance and 
+                    reliability</li>
+                </ul>
+            </div>
+            <div class="right-mile"></div>
+        </div>
+    </div> -->
+    <div class="padding">
+
+        <div class="journey">
+            <div class="journey-left">
+        <h2 class="h2 journeyh">Milestones and Recognitions</h2>
+        <div class="hr headhr"></div>
+        <h2 class="h6">Our Journey, Our Achievements</h2>
+        <p class="h5">Every year at iZeera has been marked by growth, learning, and accomplishments</p>
+        <ul>
+            <li>The launch of 100+ websites, each a testament to our expertise</li>
+            <li>Awards and recognitions from industry stalwarts for our innovative designs.</li>
+            <li>Long-term associations with global giants, highlighting our consistent performance and 
+                reliability</li>
+            </ul>
+        </div>
+        <div class="journey-right right-mile">
+        </div>
+    </div>
+</div>
+        <div class="contact" id="contact">
+            <div class="contact-left">
+                <!-- <h1 class="feel">Feel Free to Contact!</h1> -->
+                <h1 class="contact-head">Engage With Izeera</h1>
+                <div class="hr" id="cont"></div>
+                <h4>The digital world is vast and intricate, but with the right partner, it can be the canvas for your 
+                    success story. At Izeera, we’re committed to crafting such success stories. Let’s embark on this 
+                    digital journey together</h4>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Your Name...." value="" class="form-reveal">
+                    <input type="text" name="mail" id="mail" placeholder="Your email id...." class="form-reveal">
+                    <input type="text" name="phone" id="phone" placeholder="Your phone number...." class="form-reveal">
+                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Your query...." id="query"
+                        class="form-reveal"></textarea>
+                </form>
+                <div class="button-div">
+                    <button type="" class="button" id="submit-button" class="form-reveal"
+                        onclick="sendMail()">SUBMIT</button>
+                    <button type="reset()" class="button" onclick="formReset()">RESET</button>
+    
+                </div>
+            </div>
+        </div>
+        <div class="footer-cont" style="margin-top: 4remsss">
+            <!-- <div class="foot-left"
+                style="width: 100%; height: 300px; background-image: url('assets/icons/footer-bg.svg');background-size: cover;background-position: bottom; transform: translateY(1vh);">
+            </div> -->
+            <div class="foot-right">
+    
+    
+                <footer class="footer">
+                    <!-- <div style= " display: flex; justify-content: center; align-items: center;width: 100%;"> -->
+                    <div class="footer-right">
+                        <div class="footer-card">
+                            <h5>External Links</h5>
+                            <a href="#">About</a>
+                            <a href="#">Blogs</a>
+                            <a href="#">Cases</a>
+                            <a href="#">Hire Us</a>
+                            <a href="#">SEO</a>
+                            <a href="#">Web Development</a>
+                            <a href="#">Graphics Designing</a>
+                        </div>
+                        <div class="footer-card">
+                            <h5>Contact Us</h5>
+    
+                            <p class="low-margin">Hisar: +91 8570978316</p>
+                            <p class="low-margin">Kurukshetra: +91 9991448836</p>
+                            <p>Email us at: info@izeera.in</p>
+                        </div>
+                        <div class="footer-card">
+                            <h5>Address</h5>
+                            <p> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119</p>
+                            <p> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="end">&copy; Copyright iZeera @ 2023</div>
+        <script>
+                    function getHeight() {
+
+divElement = document.querySelector(".left-mile");
+
+elemHeight = divElement.offsetHeight;
+
+return elemHeight + "px"
+}
+// document.querySelector(".right-mile").style.height = getHeight();
+
+ScrollReveal({
+    reset: false,
+    distance: '20px',
+    duration: 1000,
+    delay: 400  
+})
+ScrollReveal().reveal('.journey',{delay: 200, interval: 600,duration: 2000});
+ScrollReveal().reveal('.nav',{delay: 200, origin: 'top',duration: 2000});
+ScrollReveal().reveal('.contact-left',{delay: 200, origin: 'left',duration: 2000});
+ScrollReveal().reveal('.contact-right',{delay: 200, origin: 'right',duration: 2000});
+
+        </script>
+    </body>
+    
+    </html>
