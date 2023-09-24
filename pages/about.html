@@ -37,7 +37,7 @@
          position: fixed;
          top: 0;
          backdrop-filter: blur(40px);
-         padding:0 8rem;
+         padding:0 3rem;
          /* border-bottom: 2px solid rgba(128, 128, 128, 0.137); */
          z-index: 1000;
          /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.247);
@@ -116,12 +116,12 @@
         font-family: 'Open Sans';
     }
     .ham{
-        height: 3rem;
+        height: 2rem;
         width: 6rem;
         display: none;
         background-image: url(../assets/svg/ham.svg);
         background-size: contain;
-        background-position: center;
+        background-position: right;
         background-repeat: no-repeat;
     }
     .mobile-menu{
@@ -288,16 +288,19 @@
                     <li>CASES</li>
                 </a> -->
                 <a href="../index.html#services" onclick="hideMenu()">
-                    <li>SERVICES</li>
+                    <li style="color: white; font-size: 1rem">SERVICES</li>
                 </a>
                 <a href="../blogs/blog-main.html" onclick="hideMenu()">
-                    <li>BLOG</li>
+                    <li style="color: white; font-size: 1rem">BLOG</li>
                 </a>
                 <!-- <a href="#" onclick="hideMenu()">
                     <li>ABOUT US</li>
                 </a> -->
                 <a href="#contact" onclick="hideMenu()">
-                    <li>CONTACT</li>
+                    <li style="color: white; font-size: 1rem">CONTACT</li>
+                </a>
+                <a href="../hire/hire-contact.html" onclick="hideMenu()">
+                    <li style="color: white; font-size: 1rem">HIRE US</li>
                 </a>
     
     
@@ -305,7 +308,7 @@
         </div>
     </div>
     <nav class="nav">
-        <div class="logo">
+        <div class="logo" onclick="home()">
             <!-- <h2>iZEERA</h2> -->
         </div>
         <div class="links">
@@ -379,7 +382,7 @@
                 excellence remains steadfast as we navigate an ever-evolving landscape. Izeera stands as a trusted
                 partner, ready to embrace new challenges and opportunities, fueled by a relentless passion for progress
                 and innovation.</p>
-                <button class="button">Get in touch</button>
+                    <a href="../hire/hire-contact.html"><button class="button">Get in touch</button></a>
             </div>
             <div class="journey-right imgrev grow">
             </div>
@@ -414,7 +417,7 @@
                 solutions, and staying ahead of the curve. Our unwavering commitment to innovation fuels our passion for
                 delivering transformative results, enabling our clients to not just keep pace with change but to lead
                 and thrive in the digital age.</p>
-                <button class="button">Get in touch</button>
+                <a href="../hire/hire-contact.html"><button class="button">Get in touch</button></a>
             </div>
             <div class="journey-right imgrev philos">
             </div>
@@ -430,7 +433,7 @@
                         <div class="card-heading">Bespoke Web Development</div>
                         <div class="card-para">The digital age requires businesses to have a distinct voice. We craft bespoke websites, ensuring 
                             every element resonates with the brand’s ethos.</div>
-                        <button class="button offer"><b>Hire Now!</b> </button>
+                        <!-- <button class="button offer"><b>Hire Now!</b> </button> -->
                         </div>
                 </div>
                 <div class="offerings-card">
@@ -441,7 +444,7 @@
                         <div class="card-para">Our design philosophy is rooted in empathy. We delve deep into user psyches, understanding 
                             their needs, preferences, and pain points. This insight drives our design decisions, ensuring every 
                             interface is intuitive, engaging, and delightful.</div>
-                        <button class="button offer"><b>Hire Now!</b> </button>
+                        <!-- <button class="button offer"><b>Hire Now!</b> </button> -->
                         </div>
                 </div>
                 <div class="offerings-card">
@@ -451,7 +454,7 @@
                         <div class="card-heading">Strategic SEO Services</div>
                         <div class="card-para">The digital age requires businesses to have a distinct voice. We craft bespoke websites, ensuring 
                             every element resonates with the brand’s ethos.</div>
-                        <button class="button offer"><b>Hire Now!</b> </button>
+                        <!-- <button class="button offer"><b>Hire Now!</b> </button> -->
                         </div>
                 </div>
             </div>
@@ -553,7 +556,7 @@
                         class="form-reveal"></textarea>
                 </form>
                 <div class="button-div">
-                    <button type="" class="button" id="submit-button" class="form-reveal"
+                    <button type="" class="button margin" id="submit-button" class="form-reveal"
                         onclick="sendMail()">SUBMIT</button>
                     <button type="reset()" class="button" onclick="formReset()">RESET</button>
     
@@ -572,31 +575,32 @@
                     <div class="footer-right">
                         <div class="footer-card">
                             <h5>External Links</h5>
-                            <a href="#">About</a>
-                            <a href="#">Blogs</a>
-                            <a href="#">Cases</a>
-                            <a href="#">Hire Us</a>
-                            <a href="#">SEO</a>
-                            <a href="#">Web Development</a>
-                            <a href="#">Graphics Designing</a>
+                            <!-- <a href="#">About</a> -->
+                            <a href="../blogs/blog-main.html">Blogs</a>
+                            <!-- <a href="#">Cases</a> -->
+                            <a href="../hire/hire-contact.html">Hire Us</a>
+                            <a href="../services/search-engine-optimization.html">SEO</a>
+                            <a href="../services/web-development.html">Web Development</a>
                         </div>
                         <div class="footer-card">
                             <h5>Contact Us</h5>
     
                             <p class="low-margin">Hisar: +91 8570978316</p>
                             <p class="low-margin">Kurukshetra: +91 9991448836</p>
-                            <p>Email us at: info@izeera.in</p>
+                            <!-- <p>Email us at: info@izeera.in</p> -->
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@izeera.com" target="_blank">Email us at: info@izeera.in</a>
                         </div>
                         <div class="footer-card">
                             <h5>Address</h5>
-                            <p> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119</p>
-                            <p> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
+                            <p style="text-align: left"> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119</p>
+                            <p style="text-align: left"> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
                         </div>
                     </div>
                 </footer>
             </div>
         </div>
         <div class="end">&copy; Copyright iZeera @ 2023</div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script>
                     function getHeight() {
 
@@ -614,10 +618,80 @@ ScrollReveal({
     duration: 1000,
     delay: 400  
 })
-ScrollReveal().reveal('.journey',{delay: 200, interval: 600,duration: 2000});
-ScrollReveal().reveal('.nav',{delay: 200, origin: 'top',duration: 2000});
-ScrollReveal().reveal('.contact-left',{delay: 200, origin: 'left',duration: 2000});
-ScrollReveal().reveal('.contact-right',{delay: 200, origin: 'right',duration: 2000});
+    ScrollReveal().reveal('.journey',{delay: 200, interval: 600,duration: 2000});
+    ScrollReveal().reveal('.nav',{delay: 200, origin: 'top',duration: 2000});
+    ScrollReveal().reveal('.contact-left',{delay: 200, origin: 'left',duration: 2000});
+    ScrollReveal().reveal('.contact-right',{delay: 200, origin: 'right',duration: 2000});
+
+    function home(){
+        window.location.href = "../index.html";
+    }
+    function validate(name,phone,mail,msg){
+    if (name.length == 0){
+        var namecheck = false;
+        alert("Please type your name")
+    }
+    else{
+        var namecheck = true;
+    }
+    if(phone.length != 10){
+        var phonecheck = false;
+        alert("INVALID PHONE NUMBER")
+    }
+    else {
+        var phonecheck = true;
+    }
+    if(mail.includes("@")){
+        var mailcheck = true;
+        console.log("MAIL VERIFIED")
+    }
+    else{
+        var mailcheck = false;
+        alert("INVALID MAIL")
+    }
+    if (msg.length != 0){
+        var msgcheck = true;
+    }
+    else{
+        var msgcheck = false;
+        alert("Please Put a Message")
+    }
+    if ((namecheck == true) && (phonecheck == true) && (mailcheck == true) && (msgcheck == true)){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+
+}
+
+    var submit = document.getElementById('submit-button')
+        var send = document.getElementById('submit-button');
+
+        function sendMail() {
+            var name = document.getElementById('name').value;
+            var mail = document.getElementById('mail').value;
+            var phone = document.getElementById('phone').value;
+            var msg = document.getElementById('w3review').value;
+            var body = "NAME: " + name + "<br>" + "MAIL: " + mail + "<br>" + "PHONE: " + phone + "<br>" + "MSG: " + msg;
+            var permit = validate(name, phone, mail, msg);
+            if (permit == 0) {
+                alert("Please fill complete form again!");
+            }
+            else if (permit == 1) {
+                console.log("SENDING FORM")
+                Email.send({
+                    SecureToken: "0e7195ab-4412-45ca-8944-6b3c9d82111d",
+                    To: 'varun2365scifi@gmail.com',
+                    From: "varun2365scifi@gmail.com",
+                    Subject: "iZEERA QUERY",
+                    Body: body
+                }).then(
+                    message => alert("We will Contact You Soon! \nHave a great Day!")
+                );
+            }
+        }
+
 
         </script>
     </body>

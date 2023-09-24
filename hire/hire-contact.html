@@ -9,47 +9,11 @@
     <link rel="stylesheet" href="../fonts/style.css">
     <link rel="stylesheet" href="hire-contact.css">
     <link rel="stylesheet" href="hire-responsive.css">
+    <link rel="shortcut icon" href="../tree.png" type="image/x-icon">
     <!-- <link rel="stylesheet" href="../services/web-style.css"> -->
 </head>
 
 <body>
-    
-
-    <!-- <div class="contact">
-            <div class="contact-box">
-                <div class="contact-left">
-                    <h1>
-
-                        Let Us Know Your Requirements!
-                    </h1>
-                    <div class="form">
-                        <form action="">
-                            <h4>Name</h4>
-                            <input type="text" name="" id="" placeholder="">
-                            <h4>Email Address</h4>
-                            <input type="text" name="" id="" placeholder="">
-                            <h4>Phone Number</h4>
-                            <input type="text" name="" id="" placeholder="">
-                            <h5>Select your Interest</h5>
-                            <h4 class="margin">Project Description</h4>
-                            <div class="selector">
-                                <div class="select-btn"><h6>WEB DESIGNING</h6></div>
-                                <div class="select-btn"><h6>SEO</h6></div>
-                                <div class="select-btn"><h6>BOTH</h6></div>
-
-                            </div>
-                            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="..." id="query"
-                    class="form-reveal"></textarea>
-                        </form>
-                        <div class="btn-sec">
-                            <button class="submit-btn">SUBMIT</button>
-                            <button class="submit-btn">RESET</button>
-                        </div>
-                    </div>6
-                </div>
-                <div class="contact-right"></div>
-            </div>
-        </div> -->
     <div class="contact">
         <div class="contact-form">
             <div class="form-left">
@@ -86,25 +50,6 @@
                 </div>
             </div>
             <div class="form-right">
-                <!-- <h1>Contact Information</h1>
-                <div class="write">
-                    <div class="tag">
-                        <div class="tag-left">
-                            <h3 class="bold">Address: WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra,
-                                Haryana - 136119</h3>
-                            </div>
-                            <div class="tag-left">
-                                <h3 class="bold">Phone: +91 9991448836</h3>
-                            </div>
-                            <div class="tag-left">
-                                <h3 class="bold">Email: info@izeera.com</h3>
-                            </div>
-                            <div class="tag-left">
-                                <h3 class="bold">Website: izeera.com</h3>
-                            </div>
-                        </div>
-                        <p>We're open for any suggestion or just to have a chat</p>
-                </div> -->
             </div>
         </div>
         
@@ -229,6 +174,15 @@
                     console.log(search)
                 }
             }
+            function getHeight() {
+
+divElement = document.querySelector(".contact-form");
+
+elemHeight = divElement.offsetHeight;
+
+return elemHeight + "px"
+}
+document.querySelector('.form-right').style.height = getHeight();
         </script>
 </body>
 

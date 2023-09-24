@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+    height: 50vh;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid black;
+    margin-top: 4rem;
+    /* background-color: rebeccapurple; */
+}
+.footer-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 3rem 2rem;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.footer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* height: 100%; */
+    max-width: 20rem;
+    /* background-color: red; */
+}
+h5{
+    font-size: 1.2rem;
+    color: #0d1a18;
+    font-family: 'Satoshi Bold';
+}
+a{
+    font-size: 1rem;
+    font-family: 'Satoshi Medium';
+    margin: 0.3rem 0;
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+a:hover{
+    color: black;
+    cursor: pointer;
+}
+.top{
+    margin-top: 2rem;
+}
+p{
+    font-size: 1rem;
+    font-family: 'Satoshi medium';
+    margin: 0.3rem 0;
+    color: rgb(87, 87, 87);
+}
+.low-margin{
+    margin-top: 2rem;
+}
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.411);
+    padding: 1rem 0;
+}
+.copyy{
+    font-size: 0.8rem;
+    font-family: 'Satoshi Regular';
+    color: #0d1a18;
+}
+@media only screen and (max-width: 880px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        /* background-color: red; */
+    }
+    .footer-card{
+        margin-bottom: 2rem;
+    }
+    .top{
+        margin-top: 0.5rem;
+    }
+    .low-margin{
+        margin-top: 0.5rem;
+    }
+    footer{
+        height: auto;
+    }
+}

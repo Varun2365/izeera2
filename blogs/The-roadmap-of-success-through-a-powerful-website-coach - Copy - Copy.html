@@ -7,42 +7,419 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iZEERA-The roadmap of success through a powerful website coach.</title>
     <link rel="stylesheet" href="css/blog-style.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <!-- <link rel="stylesheet" href="../responsive.css"> -->
     <link rel="shortcut icon" href="../tree.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../footer/footer.css"> -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+    height: 50vh;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.068);
+    /* margin-top: 4rem; */
+    /* background-color: rebeccapurple; */
+}
+.footer-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 3rem 2rem;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.footer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* height: 100%; */
+    max-width: 20rem;
+    /* background-color: red; */
+}
+h5{
+    font-size: 1.2rem;
+    color: #0d1a18;
+    font-family: 'Satoshi Bold';
+}
+a{
+    font-size: 1rem;
+    font-family: 'Satoshi Medium';
+    margin: 0.3rem 0;
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+a:hover{
+    color: black;
+    cursor: pointer;
+}
+.top{
+    margin-top: 2rem;
+}
+p{
+    font-size: 1rem;
+    font-family: 'Satoshi medium';
+    margin: 0.3rem 0;
+    color: rgb(87, 87, 87);
+}
+.low-margin{
+    margin-top: 2rem;
+}
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.411);
+    padding: 1rem 0;
+}
+.copyy{
+    font-size: 0.8rem;
+    font-family: 'Satoshi Regular';
+    color: #0d1a18;
+}
+@media only screen and (max-width: 880px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        /* background-color: red; */
+    }
+    .footer-card{
+        margin-bottom: 2rem;
+    }
+    .top{
+        margin-top: 0.5rem;
+    }
+    .low-margin{
+        margin-top: 0.5rem;
+    }
+    footer{
+        height: auto;
+    }
+}
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+    height: 11vh;
+    width: 100%;
+    overflow: hidden;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgb(250, 250, 250);
+     background-color: white;
+     position: fixed;
+     top: 0;
+     backdrop-filter: blur(40px);
+     padding:0 8rem;
+     /* border-bottom: 2px solid rgba(128, 128, 128, 0.137); */
+     z-index: 1000;
+     /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.247);
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 3px; */
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+     overflow: hidden;
+ }
+ nav h2{
+    font-weight: 500;
+    color: #182f2c;
+    letter-spacing: 2px;
+    font-size: 1.78rem;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+nav li{
+    font-size: 1.1rem;
+    color: #7a7e83;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: 'Roboto';
+    font-family: 'Open Sans', sans-serif;
+
+}
+nav a{
+    text-decoration: none;
+    margin: 0 2rem;
+}
+nav li:hover{
+    color: #182f2c;
+    transform: translateY(-3px);
+}
+li::after{
+
+    content: '';
+    width: 0;
+    height: 3px ;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 3px;
+}
+nav a:hover li::after{
+    width: 100%;
+}
+
+button{
+    padding: 01rem 2.6rem;
+    border: none;
+    color: white;
+    background-color: #182f2c;
+    margin-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+nav button:hover{
+    background-color: #0c1816;
+    cursor: pointer;
+    animation: jump 0.3s ease-in-out;
+    scale: 1.01;
+
+}
+.mobile{
+    display: none;
+    margin-bottom: 3rem;
+}
+#click{
+    font-weight: 300;
+    font-family: 'Open Sans';
+}
+.ham{
+    height: 2rem;
+    width: 6rem;
+    display: none;
+    background-image: url(../assets/svg/ham.svg);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.mobile-menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #0c1816;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100000;
+}
+.mobile-links ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.mobile-links{
+    padding-top: 6rem;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+.mobile-links a{
+    width: 120%;
+    text-align: center;
+    color: white;
+    padding: 2rem 4rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+    font-family: 'Jost';
+}
+.mobile-links a:hover{
+    background-color: #000000;
+}
+#ham{
+    /* display: none; */
+    transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
+}
+.cross
+{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.cross-btn{
+    background-image: url(../assets/svg/cross.svg);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    height: 2rem;
+}
+.logo{
+    height: 100%;
+    width: 100px;
+    background-image: url(../assets/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    scale: 1.2;
+    animation: float 4s infinite ease-in-out;
+}
+.logo:hover{
+    cursor: pointer;
+}
+button{
+    padding: 01rem 2.6rem;
+    border: none;
+    color: white;
+    background-color: #182f2c;
+    margin-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+nav button:hover{
+    background-color: #0c1816;
+    cursor: pointer;
+    animation: jump 0.3s ease-in-out;
+    scale: 1.01;
+
+}
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 13 px;
+    }
+    .links{
+        display: none;
+    }
+    .ham{
+        display: block;
+    }
+    nav{
+        height: 7vh;
+        padding: 0 3rem;
+    }
+    .nav{
+        background-color:#0d1a18d2;
+        backdrop-filter: blur(10px);
+    }
+    .nav h2{
+        color:  white;
+    
+    }
+}
+    @media screen and (max-width: 1280px) {
+    html{
+        font-size: 13px;
+    }
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-4px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes jump{
+    0%,100%{
+        transform: translateY(0);
+        /* scale: 1; */
+    }
+    20%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(-3px);
+        /* scale: 1.001; */
+    }
+    80%{
+        transform: translateY(1.5px);
+    }
+}
+@media only screen and (max-width: 900px){
+    html{
+        font-size: 10px;
+    }
+    .blog-wrapper{
+        width: 100%;
+        /* background-color: red; */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .blog-body{
+        width: 100%;
+        min-width: none;
+        /* background-color: rebeccapurple; */
+    }
+    .img{
+        width: 70%;
+        height: 30vh;
+    }
+}
+@media only screen and (max-width: 1200px){
+    html{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 490px){
+.img{
+    height: 20vh;
+}
+}
+
+    </style>
 
 </head>
 
 <body>
-    <nav class="nav"></nav>
     <div class="mobile-menu" id="ham">
         <div class="cross"><button class="cross-btn" onclick="hideMenu()"></button></div>
         <div class="mobile-links">
             <ul>
-
-
-                <a href="../index.html" onclick="hideMenu()">
-                    <li>HOME</li>
-                </a>
-                <!-- <a href="#" onclick="hideMenu()">
-                    <li>SERVICES</li>
+    
+    <!-- 
+                <a href="#" onclick="hideMenu()">
+                    <li>CASES</li>
                 </a> -->
+                <a href="../index.html#services" onclick="hideMenu()">
+                    <li>SERVICES</li>
+                </a>
                 <a href="../blogs/blog-main.html" onclick="hideMenu()">
-                    <li>BLOGS</li>
+                    <li>BLOG</li>
                 </a>
                 <a href="../pages/about.html" onclick="hideMenu()">
                     <li>ABOUT US</li>
                 </a>
-                <!-- <a href="#contact" onclick="hideMenu()">
+                <a href="../hire/hire-contact.html" onclick="hideMenu()">
                     <li>CONTACT</li>
-                </a> -->
-
-
+                </a>
+    
+    
             </ul>
         </div>
     </div>
     <nav class="nav">
-        <div class="logo">
+        <div class="logo" onclick="home()">
             <!-- <h2>iZEERA</h2> -->
         </div>
         <div class="links">
@@ -50,18 +427,18 @@
                 <!-- <a href="#">
                     <li>CASES</li>
                 </a> -->
-                <a href="../index.html">
-                    <li>HOME</li>
+                <a href="../index.html#services">
+                    <li>SERVICES</li>
                 </a>
-                <a href="../blogs/blog-main.html">
+                <a href="blog-main.html">
                     <li>BLOG</li>
                 </a>
-                <a href="../pages/about.html">
+                <a href="../pages/about.html" target="_blank">
                     <li>ABOUT US</li>
                 </a>
-                <!-- <a href="#contact">
+                <a href="../index.html#contact">
                     <li>CONTACT</li>
-                </a> -->
+                </a>
                 <a href="../hire/hire-contact.html"><button>HIRE US</button></a>
             </UL>
         </div>
@@ -240,7 +617,7 @@
 
             </p>
         </div>
-        <div class="blog-links">
+        <!-- <div class="blog-links">
             <h4>Read More Blogs</h4>
                     <a href="">1). Wordpress Vs Custom Website</a>
                     <a href="">2). Why every shopkeeper needs an online shopping website</a>
@@ -249,50 +626,44 @@
                         <input type="text" name="" id="email" placeholder="Enter your mail id here....">
                         <button class="join" style="height:100%; width:30%; padding:1rem 2rem; margin-left:none">JOIN</button>
                     </div>
-        </div>
+        </div> -->
     </div>
     <!-- <div class="news">
         <h4>SUBSCRIBE TO NEWSLETTER</h4>
 
 
     </div> -->
-    <div class="footer-cont" style="margin-top:5rem;">
-        <!-- <div class="foot-left"
-            style="width: 100%; height: 300px; background-image: url('assets/icons/footer-bg.svg');background-size: cover;background-position: bottom; transform: translateY(1vh);">
-        </div> -->
-        <div class="foot-right">
-
-
-            <footer class="footer">
-                <!-- <div style= " display: flex; justify-content: center; align-items: center;width: 100%;"> -->
-                <div class="footer-right">
-                    <div class="footer-card">
-                        <h5>External Links</h5>
-                        <a href="#">About</a>
-                        <a href="#">Blogs</a>
-                        <a href="#">Cases</a>
-                        <a href="#">Hire Us</a>
-                        <a href="#">SEO</a>
-                        <a href="#">Web Development</a>
-                        <a href="#">Graphics Designing</a>
-                    </div>
-                    <div class="footer-card">
-                        <h5>Contact Us</h5>
-
-                        <p class="low-margin">Hisar: +91 8570978316</p>
-                        <p class="low-margin">Kurukshetra: +91 9991448836</p>
-                        <p>Email us at: info@izeera.in</p>
-                    </div>
-                    <div class="footer-card">
-                        <h5>Address</h5>
-                        <p> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119</p>
-                        <p> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
-                    </div>
-                </div>
-            </footer>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-card">
+                <h5>External Links</h5>
+                <a href="../pages/about.html" target="_blank" class="top">About</a>
+                <a href="blog-main.html" target="_blank">Blogs</a>
+                <!-- <a href="#">Cases</a> -->
+                <a href="../hire/hire-contact.html" target="_blank">Hire Us</a>
+                <a href="../services/search-engine-optimization.html" target="_blank">SEO</a>
+                <a href="../services/web-development.html" target="_blank">Web Development</a>
+        
+            </div>
+            <div class="footer-card">
+                <h5>Contact Us</h5>
+        
+                <p class="low-margin">Hisar: +91 8570978316</p>
+                <p>Kurukshetra: +91 9991448836</p>
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@izeera.com" target="_blank">Email us at: info@izeera.in</a>
+            </div>
+            <div class="footer-card">
+                <h5>Address</h5>
+                <p class="top"> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119</p>
+                <p> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
+        
+            </div>
         </div>
-    </div>
-    <div class="end">&copy; Copyright iZeera @ 2023</div>
+        <div class="footer-bottom">
+            <p class="copyy">All Rights Reserved - iZEERA 2023</p>
+        </div>
+            </footer>
+
     <script>        var ham = document.getElementById("ham")
         function showMenu() {
             ham.style.display = "flex";
@@ -306,7 +677,11 @@
             setTimeout(() => {
                 ham.style.display = "none";
             }, 200);
-        }</script>
+        }
+            function home(){
+        window.location.href = "../index.html";
+    }
+        </script>
 </body>
 
 </html>

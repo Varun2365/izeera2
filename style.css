@@ -651,7 +651,7 @@ form textarea{
     display: none;
     background-image: url(assets/svg/ham.svg);
     background-size: contain;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
 }
 
@@ -741,12 +741,13 @@ footer{
     top: 0;
     height: 100vh;
     width: 70%;
-    background-color: #0c1816;
+    background-color: #0c1816fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    backdrop-filter: blur(4px);
     z-index: 100000;
 }
 .mobile-links ul{
@@ -895,7 +896,8 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;
-    scale: 1.4;
+    animation: floats 3s ease-in-out infinite;
+    scale: 1.2;
 }
 
 
@@ -1019,6 +1021,17 @@ footer{
 	}
 	50% {
 		transform: translatey(-30px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes floats {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-4px);
 	}
 	100% {
 		transform: translatey(0px);

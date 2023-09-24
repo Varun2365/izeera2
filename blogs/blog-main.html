@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iZEERA - BLOGS</title>
+    <title>iZEERA - Blogs</title>
     <link rel="stylesheet" href="blog-main.css">
     <link rel="stylesheet" href="../fonts/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -110,12 +110,12 @@
         font-family: 'Open Sans';
     }
     .ham{
-        height: 3rem;
+        height: 2rem;
         width: 6rem;
         display: none;
         background-image: url(../assets/svg/ham.svg);
         background-size: contain;
-        background-position: center;
+        background-position: right;
         background-repeat: no-repeat;
     }
     .mobile-menu{
@@ -154,7 +154,7 @@
         padding: 2rem 4rem;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
-        font-size: 1.8rem;
+        font-size: 1rem;
         font-family: 'Jost';
     }
     .mobile-links a:hover{
@@ -209,6 +209,102 @@
         scale: 1.01;
     
     }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+    height: 40vh;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid rgba(59, 59, 59, 0.158);
+    /* margin-top: 4rem; */
+    /* background-color: #0d1a18; */
+    /* background-color: rebeccapurple; */
+}
+.footer-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 3rem 2rem;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.footer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* height: 100%; */
+    max-width: 20rem;
+    /* background-color: red; */
+}
+h5{
+    font-size: 1.3rem;
+    color: #0d1a18;
+    font-family: 'Jost';
+    font-weight: 500;
+}
+a{
+    font-size: 1.2rem;
+    font-family: 'Jost';
+    font-weight: 400;
+    margin: 0.3rem 0;
+    color: rgb(94, 94, 94);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+a:hover{
+    color: rgb(2, 2, 2);
+    cursor: pointer;
+}
+.top{
+    margin-top: 2rem;
+}
+p{
+    font-size: 1.2rem;
+    font-family: 'Jost';
+    font-weight: 400;
+    margin: 0.3rem 0;
+    color: rgb(92, 92, 92);
+}
+.low-margin{
+    margin-top: 2rem;
+}
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.411);
+    padding: 1rem 0;
+}
+.copyy{
+    font-size: 0.8rem;
+    font-family: 'Jost';
+    font-weight: 300;
+    color: #000000;
+}
+@media only screen and (max-width: 880px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        /* background-color: red; */
+    }
+    .footer-card{
+        margin-bottom: 2rem;
+    }
+    .top{
+        margin-top: 1rem;
+    }
+    .low-margin{
+        margin-top: 1rem;
+    }
+    footer{
+        height: auto;
+    }
+}
+
     @media screen and (max-width: 1200px) {
         html{
             font-size: 13 px;
@@ -295,7 +391,7 @@
         </div>
     </div>
     <nav class="nav">
-        <div class="logo">
+        <div class="logo" onclick="home()">
             <!-- <h2>iZEERA</h2> -->
         </div>
         <div class="links">
@@ -377,7 +473,7 @@
                         <h3>In today's digital age, having a captivating and functional website is essential for 
                             any business or individual aiming to establish a strong online presence. Websites 
                             serve as virtual storefronts....</h3>
-                            <a href=""><button class="read">Read More</button></a>
+                            <a href="Custom-websites-Vs-Wordpress.html"><button class="read">Read More</button></a>
                     </div>
                 </div>
                 <div class="blog-card anim">
@@ -397,7 +493,7 @@
                         </div>
                         <h3>In today's fast-paced and digital world, having an online presence is essential for 
                             any business, including traditional shopkeepers.....</h3>
-                           <a href=""> <button class="read">Read More</button></a> 
+                           <a href="why-every-shopkeeper-needs-an-online-shopping-website.html"> <button class="read">Read More</button></a> 
                     </div>
                 </div>
             </div>
@@ -405,6 +501,36 @@
 
         </div>
     </div>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-card">
+                <h5>External Links</h5>
+                <a href="../pages/about.html" target="_blank" class="top">About</a>
+                <a href="blog-main.html" target="_blank">Blogs</a>
+                <!-- <a href="#">Cases</a> -->
+                <a href="../hire/hire-contact.html" target="_blank">Hire Us</a>
+                <a href="../services/search-engine-optimization.html" target="_blank">SEO</a>
+                <a href="../services/web-development.html" target="_blank">Web Development</a>
+        
+            </div>
+            <div class="footer-card">
+                <h5>Contact Us</h5>
+        
+                <p class="low-margin">Hisar: +91 8570978316</p>
+                <p>Kurukshetra: +91 9991448836</p>
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@izeera.com" target="_blank">Email us at: info@izeera.in</a>
+            </div>
+            <div class="footer-card">
+                <h5>Address</h5>
+                <p class="top"> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119</p>
+                <p> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
+        
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyy">All Rights Reserved - iZEERA 2023</p>
+        </div>
+            </footer>
     <script>
         var ham = document.getElementById("ham");
         function showMenu(){
@@ -421,6 +547,9 @@
 });
 ScrollReveal().reveal('.anim',{delay: 100,duration:1000,interval: 200})
 ScrollReveal().reveal('.nav',{delay: 100,duration:1000,interval: 200, origin:'top',distance: '10px'})
+function home(){
+        window.location.href = "../index.html";
+    }
     </script>
 </body>
 </html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iZEERA- Why every shopkeeper needs an online shopping website.</title>
+    <link rel="stylesheet" href="css/blog-style.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <!-- <link rel="stylesheet" href="../responsive.css"> -->
+    <link rel="shortcut icon" href="../tree.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../footer/footer.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        footer {
+            height: 50vh;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid rgba(0, 0, 0, 0.068);
+            /* margin-top: 4rem; */
+            /* background-color: rebeccapurple; */
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-around;
+            align-items: start;
+            padding: 3rem 2rem;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+
+        .footer-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            /* height: 100%; */
+            max-width: 20rem;
+            /* background-color: red; */
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            color: #0d1a18;
+            font-family: 'Satoshi Bold';
+        }
+
+        a {
+            font-size: 1rem;
+            font-family: 'Satoshi Medium';
+            margin: 0.3rem 0;
+            color: rgb(88, 88, 88);
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        .top {
+            margin-top: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            font-family: 'Satoshi medium';
+            margin: 0.3rem 0;
+            color: rgb(87, 87, 87);
+        }
+
+        .low-margin {
+            margin-top: 2rem;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid rgba(128, 128, 128, 0.411);
+            padding: 1rem 0;
+        }
+
+        .copyy {
+            font-size: 0.8rem;
+            font-family: 'Satoshi Regular';
+            color: #0d1a18;
+        }
+
+        @media only screen and (max-width: 880px) {
+            .footer-top {
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+                /* background-color: red; */
+            }
+
+            .footer-card {
+                margin-bottom: 2rem;
+            }
+
+            .top {
+                margin-top: 0.5rem;
+            }
+
+            .low-margin {
+                margin-top: 0.5rem;
+            }
+
+            footer {
+                height: auto;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            height: 11vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(250, 250, 250);
+            background-color: white;
+            position: fixed;
+            top: 0;
+            backdrop-filter: blur(40px);
+            padding: 0 8rem;
+            /* border-bottom: 2px solid rgba(128, 128, 128, 0.137); */
+            z-index: 1000;
+            /* box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.247);
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 3px; */
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            overflow: hidden;
+        }
+
+        nav h2 {
+            font-weight: 500;
+            color: #182f2c;
+            letter-spacing: 2px;
+            font-size: 1.78rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav li {
+            font-size: 1.1rem;
+            color: #7a7e83;
+            transition: all 0.2s ease-in-out;
+            font-weight: 500;
+            font-family: 'Roboto';
+            font-family: 'Open Sans', sans-serif;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 2rem;
+        }
+
+        nav li:hover {
+            color: #182f2c;
+            transform: translateY(-3px);
+        }
+
+        li::after {
+
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: green;
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            transition: all 0.3s ease-in-out;
+            margin-top: 3px;
+        }
+
+        nav a:hover li::after {
+            width: 100%;
+        }
+
+        button {
+            padding: 01rem 2.6rem;
+            border: none;
+            color: white;
+            background-color: #182f2c;
+            margin-left: 1rem;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        nav button:hover {
+            background-color: #0c1816;
+            cursor: pointer;
+            animation: jump 0.3s ease-in-out;
+            scale: 1.01;
+
+        }
+
+        .mobile {
+            display: none;
+            margin-bottom: 3rem;
+        }
+
+        #click {
+            font-weight: 300;
+            font-family: 'Open Sans';
+        }
+
+        .ham {
+            height: 2rem;
+            width: 6rem;
+            display: none;
+            background-image: url(../assets/svg/ham.svg);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 70%;
+            background-color: #0c1816;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: 100000;
+        }
+
+        .mobile-links ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+        .mobile-links {
+            padding-top: 6rem;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+        }
+
+        .mobile-links a {
+            width: 120%;
+            text-align: center;
+            color: white;
+            padding: 2rem 4rem;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            font-size: 1rem;
+            font-family: 'Jost';
+        }
+
+        .mobile-links a:hover {
+            background-color: #000000;
+        }
+
+        #ham {
+            /* display: none; */
+            transform: translateX(100%);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .cross {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .cross-btn {
+            background-image: url(../assets/svg/cross.svg);
+            background-color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 20%;
+            height: 2rem;
+        }
+
+        .logo {
+            height: 100%;
+            width: 100px;
+            background-image: url(../assets/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center left;
+            scale: 1.2;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+        }
+
+        button {
+            padding: 01rem 2.6rem;
+            border: none;
+            color: white;
+            background-color: #182f2c;
+            margin-left: 1rem;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        nav button:hover {
+            background-color: #0c1816;
+            cursor: pointer;
+            animation: jump 0.3s ease-in-out;
+            scale: 1.01;
+
+        }
+
+        @media screen and (max-width: 1200px) {
+            html {
+                font-size: 13 px;
+            }
+
+            .links {
+                display: none;
+            }
+
+            .ham {
+                display: block;
+            }
+
+            nav {
+                height: 7vh;
+                padding: 0 3rem;
+            }
+
+            .nav {
+                background-color: #0d1a18d2;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav h2 {
+                color: white;
+
+            }
+        }
+
+        @media screen and (max-width: 1280px) {
+            html {
+                font-size: 13px;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+
+            50% {
+                transform: translatey(-4px);
+            }
+
+            100% {
+                transform: translatey(0px);
+            }
+        }
+
+        @keyframes jump {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* scale: 1; */
+            }
+
+            20% {
+                transform: translateY(-2px);
+            }
+
+            50% {
+                transform: translateY(-3px);
+                /* scale: 1.001; */
+            }
+
+            80% {
+                transform: translateY(1.5px);
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            html {
+                font-size: 10px;
+            }
+
+            .blog-wrapper {
+                width: 100%;
+                /* background-color: red; */
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .blog-body {
+                width: 100%;
+                min-width: none;
+                /* background-color: rebeccapurple; */
+            }
+
+            .img {
+                width: 70%;
+                height: 30vh;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            html {
+                font-size: 13px;
+            }
+        }
+
+        @media only screen and (max-width: 490px) {
+            .img {
+                height: 20vh;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mobile-menu" id="ham">
+        <div class="cross"><button class="cross-btn" onclick="hideMenu()"></button></div>
+        <div class="mobile-links">
+            <ul>
+
+                <!-- 
+                <a href="#" onclick="hideMenu()">
+                    <li>CASES</li>
+                </a> -->
+                <a href="../index.html#services" onclick="hideMenu()">
+                    <li>SERVICES</li>
+                </a>
+                <a href="../blogs/blog-main.html" onclick="hideMenu()">
+                    <li>BLOG</li>
+                </a>
+                <a href="../pages/about.html" onclick="hideMenu()">
+                    <li>ABOUT US</li>
+                </a>
+                <a href="../hire/hire-contact.html" onclick="hideMenu()">
+                    <li>CONTACT</li>
+                </a>
+
+
+            </ul>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="logo" onclick="home()">
+            <!-- <h2>iZEERA</h2> -->
+        </div>
+        <div class="links">
+            <UL>
+                <!-- <a href="#">
+                    <li>CASES</li>
+                </a> -->
+                <a href="../index.html#services">
+                    <li>SERVICES</li>
+                </a>
+                <a href="blog-main.html">
+                    <li>BLOG</li>
+                </a>
+                <a href="../pages/about.html" target="_blank">
+                    <li>ABOUT US</li>
+                </a>
+                <a href="../index.html#contact">
+                    <li>CONTACT</li>
+                </a>
+                <a href="../hire/hire-contact.html"><button>HIRE US</button></a>
+            </UL>
+        </div>
+        <div class="ham" onclick="showMenu()"></div>
+    </nav>
+    <div class="blog-wrapper">
+        <div class="blog-body">
+
+
+
+
+
+            <h1 class="h1">Revolutionize Your Business: Why Every Shopkeeper Needs an Online Shopping Website</h1>
+            <h1 class="h1head">I. Introduction</h1>
+            <p class="p">
+                In today's fast-paced and digital world, having an online presence is essential for any business,
+                including traditional shopkeepers. The growing trend of online shopping has revolutionized the way
+                people buy products and services. As a shopkeeper, having an online shopping website can provide
+                numerous advantages and open up new opportunities for success.</p>
+            <div class="img firstt" style="background-image: url(images/firsttt.jpg)"></div>
+
+
+
+            <h1 class="h1head">II. Understanding the Needs of Modern Customers</h1>
+            <p class="p">
+
+                With changing consumer behaviors, shopkeepers need to adapt to meet the needs of their customers. Modern
+                consumers seek convenience and accessibility in their shopping experience. Having an online shopping
+                website allows customers to browse and purchase products at their own convenience, anytime and anywhere.
+                It eliminates the need for physical store visits, saving time and effort.</p>
+            <div class="img secondd" style="background-image: url(images/seconddd.jpg)"></div>
+            <p class="p">Furthermore, online shopping provides consumers with the ability to research and compare
+                products easily. They can read product descriptions, reviews, and compare prices across different
+                websites. By having an online shopping presence, shopkeepers can cater to these customer needs and gain
+                an edge over competitors.
+
+            </p>
+
+
+
+            <h1 class="h1head">III. Expanding Your Customer Base</h1>
+            <p class="p">
+                An online shopping website helps shopkeepers overcome geographical barriers. Instead of being limited to
+                a local customer base, an online store allows access to customers from around the world. This opens up
+                new market opportunities and increases the potential for sales growth.</p>
+            <div class="img thirdd" style="background-image: url(images/thirddd.jpg);"></div>
+            <p class="p">Moreover, having an online shopping website is crucial for targeting tech-savvy consumers. The
+                younger generation prefers the convenience of online shopping, and by catering to their preferences,
+                shopkeepers can tap into this demographic and expand their customer base.
+
+
+
+
+                Additionally, an online shopping website enables shopkeepers to cater to specific niches. Whether it's
+                selling artisanal products, specialty items, or catering to a specific target audience, an online store
+                provides the flexibility to reach and engage with niche customers effectively.
+            </p>
+
+
+            <h1 class="h1head">IV. Boosting Sales and Increasing Revenue</h1>
+            <p class="p">One of the major advantages of having an online shopping website is the 24/7 availability for
+                customers. Unlike physical stores with limited operating hours, an online store is accessible round the
+                clock. This means that customers can make purchases at any time, even outside regular business hours,
+                resulting in increased sales and revenue for shopkeepers.</p>
+            <div class="img fourtht" style="background-image: url(images/fourthhh.jpg)"></div>
+            <p class="p">
+                Furthermore, an online store allows for a wider product range compared to a physical store. Shopkeepers
+                can showcase their entire inventory without space limitations. This not only provides customers with
+                more options but also increases the potential for upselling and personalized recommendations. By
+                leveraging customer data and preferences, shopkeepers can tailor their offerings and increase the
+                average order value.
+            </p>
+
+
+            <h1 class="h1head">V. Building Brand Trust and Credibility</h1>
+            <p class="p">An online shopping website plays a crucial role in enhancing brand image. With a well-designed
+                website, shopkeepers can showcase their professionalism, reliability, and commitment to customer
+                satisfaction. The user-friendly interface and seamless navigation create a positive impression,
+                instilling trust and credibility in potential customers.</p>
+            <div class="img fifth" style="background-image: url(images/fifthhh.jpg)"></div>
+            <p class="p">Moreover, providing social proof through reviews and ratings is essential in building trust.
+                Customers rely heavily on others' experiences and opinions when making purchasing decisions. By
+                incorporating customer reviews and displaying ratings, shopkeepers can leverage positive feedback to
+                build trust and motivate potential customers to make a purchase.
+
+
+
+
+                Effective customer communication and support are also critical in building trust and credibility. An
+                online shopping website allows for direct and prompt communication with customers through various
+                channels such as live chat, email, or phone support. By addressing customer concerns and providing
+                assistance, shopkeepers can strengthen their relationship with customers and enhance their overall
+                shopping experience.
+
+            </p>
+
+
+            <h1 class="h1head">VI. Cost-Effectiveness and Scalability</h1>
+            <p class="p">
+                Compared to operating a physical store, having an online shopping website offers significant cost
+                advantages. Shopkeepers can save on overhead costs such as rent, utilities, and staffing. The need for
+                physical space and location maintenance is eliminated, resulting in substantial cost savings.
+            </p>
+            <div class="img sixthh" style="background-image: url(images/sixthhh.jpg);"></div>
+            <p class="p">Additionally, an online store provides unlimited scalability. There are no limitations on the
+                number of products that can be offered or the number of customers that can be served simultaneously. As
+                the business grows, online infrastructure can be easily expanded to accommodate increased traffic and
+                sales.
+            </p>
+
+
+            <h1 class="h1head">VII. Analyzing Market Trends and Customer Insights</h1>
+            <p class="p">Having an online shopping website allows shopkeepers to gather detailed customer data. Every
+                interaction with customers is captured and can be analyzed to gain valuable insights into shopping
+                patterns, preferences, and trends. This data can be utilized to create targeted marketing campaigns,
+                personalized recommendations, and optimize the overall customer experience.
+            </p>
+            <div class="img seventhh" style="background-image: url(images/seventhhh.jpg);"></div>
+            <p class="p">Utilizing analytics tools further enhances a shopkeeper's understanding of their market. By
+                tracking website traffic, customer engagement, and conversion rates, shopkeepers can make data-driven
+                decisions and stay ahead of competitors. Keeping a pulse on market trends and understanding customer
+                preferences is vital for long-term success.
+
+            </p>
+
+
+            <h1 class="h1head">VIII. Overcoming Challenges and Potential Drawbacks</h1>
+            <p class="p">
+                While the benefits of having an online shopping website are numerous, there are challenges and potential
+                drawbacks that shopkeepers need to address. The initial investment and technology considerations, such
+                as website development and maintenance, may require financial resources. However, the long-term benefits
+                outweigh the initial costs.
+            </p>
+            <div class="img eighth" style="background-image: url(images/eighthhh.jpg);"></div>
+            <p class="p">Online security and data protection are critical factors to consider. Shopkeepers must
+                prioritize secure payment gateways, SSL certification, and maintaining customer data confidentiality to
+                ensure a safe online shopping environment.Managing inventory and shipping logistics can also be a
+                challenge when transitioning to an online store. Efficient inventory management systems and partnerships
+                with reliable shipping providers are essential to ensure seamless order fulfillment and customer
+                satisfaction.
+
+            </p>
+
+            <h1 class="h1head">IX. Steps to Create an Online Shopping Website</h1>
+            <p class="p">Creating an online shopping website involves a few key steps. The first step is choosing the
+                right e-commerce platform that aligns with the business's needs and goals. Platforms like Shopify,
+                WooCommerce, or Magento offer customizable options and robust features for building an online store.
+            </p>
+            <div class="img ninthh" style="background-image:url(images/ninthhh.jpg)"></div>
+            <p class="p">Designing a user-friendly interface is crucial to provide an enjoyable shopping experience for
+                customers. The website layout, navigation, and product categorization should be intuitive and visually
+                appealing.
+
+
+
+
+                Integrating payment gateways and ensuring security are vital aspects of an online shopping website.
+                Shopkeepers need to select secure payment options and ensure that customer data is protected through
+                encryption and SSL certificates.
+
+            </p>
+
+
+            <h1 class="h1head">X. Marketing and Promoting Your Online Store</h1>
+            <p class="p">Having a well-designed online store is not enough; marketing and promotion are essential for
+                attracting customers. Search Engine Optimization (SEO) techniques can help improve website visibility in
+                search engine results. Optimizing product descriptions, using relevant keywords, and building backlinks
+                are effective SEO strategies.
+            </p>
+            <div class="img tenth" style="background-image: url(images/tenthhh.jpg);"></div>
+            <p class="p">Social media marketing is another powerful tool for promoting an online store. Platforms like
+                Facebook, Instagram, and Pinterest allow shopkeepers to reach a broader audience, engage with potential
+                customers, and drive traffic to their website.
+
+
+
+
+                Email marketing plays a crucial role in customer engagement and retention. Building an email list and
+                sending targeted campaigns and newsletters help keep customers informed about new products, promotions,
+                or exclusive discounts.
+
+            </p>
+
+
+            <h1 class="h1head">XI. Case Studies: Successful Shopkeepers Going Online</h1>
+            <p class="p">Story 1: John's Toy Store
+
+                John, a small local toy shop owner, decided to create an online shopping website for his business. By
+                going online, he saw a significant transformation in his sales and business growth. The online presence
+                attracted customers from different cities, and John was able to expand his reach beyond his local
+                community.
+                <br>
+            </p>
+            <!-- <div class="img eleventhh" style="background-image: url(images/eleventhh.jpg);"></div> -->
+            <p class="p">Story 2: Sarah's Handmade Jewelry
+
+                Sarah, a jewelry designer, wanted to expand her market penetration. With an online shopping website, she
+                was able to showcase her unique handmade jewelry to a global audience. Through effective online
+                marketing strategies, Sarah successfully increased her sales and gained recognition in the industry.
+
+
+
+            </p>
+            <p class="p">Story 3: David's Home Goods Store
+
+                David's home goods store faced stiff competition in a saturated market. By creating an online shopping
+                website, he was able to provide exceptional customer service and increase customer satisfaction. This,
+                in turn, led to increased sales and customer loyalty.
+
+
+
+
+            </p>
+
+
+            <h1 class="h1head">XII. Summary and Key Takeaways</h1>
+            <p class="p">
+                Having an online shopping website is crucial for shopkeepers in today's digital era. It provides a range
+                of benefits, including expanding customer base, boosting sales, building brand trust, and reducing
+                costs. Strategies such as understanding customer needs, analyzing market trends, and overcoming
+                challenges are essential for a successful online presence.
+            </p>
+            <div class="img twelvee" style="background-image: url(images/twelvee.jpg)"></div>
+            <p class="p">WordPress offers a significantly shorter development timeline, owing to its extensive range of
+                pre-designed themes and readily available plugins. Users can choose a suitable theme, customize it to
+                some extent, and launch their website relatively quickly. However, customizations and additional
+                features may extend the timeline.
+
+            </p>
+            <h1 class="h1head">XIII. FAQs</h1>
+            <p class="p">
+                A. How much does it cost to create an online shopping website?
+
+                The cost of creating an online shopping website varies depending on factors like the chosen e-commerce
+                platform, customization requirements, and additional features. It is best to research and consult with
+                web developers or agencies to get accurate cost estimates.
+
+<br>
+
+
+                B. What are the essential features to include in an online store?
+
+                Essential features for an online store include product catalog, shopping cart, secure payment gateways,
+                search functionality, customer reviews, and ratings, shipping and tracking options, and responsive
+                design for mobile devices.
+
+<br>
+
+
+                C. How can I ensure the security of customer data and transactions?
+
+                Ensuring the security of customer data and transactions involves using trusted and secure payment
+                gateways, integrating SSL certificates for data encryption, regularly updating software and plugins, and
+                following best practices for data protection as recommended by security experts.
+
+
+<br>
+
+                By following these steps, shopkeepers can revolutionize their businesses and tap into the vast potential
+                of the online shopping landscape. With an online shopping website, they can expand their reach, increase
+                sales, and build a strong brand presence in the digital world.
+
+            </p>
+            <!-- <div class="img twelvee" style="background-image: url(images/thirtenn.jpg)"></div>
+            <p class="p">experiences. These case studies exemplify the advantages of custom websites in establishing a
+                unique and influential online presence.
+
+            </p> -->
+        
+            <!-- <div class="img twelvee" style="background-image: url(images/.jpg)"></div>
+            <p class="p">required level of customization, the desired user experience, and the available budget. By
+                carefully weighing these factors, businesses can make an informed decision that aligns with their unique
+                requirements.
+
+            </p> -->
+        </div>
+    </div>
+    <footer style="margin-top: 5rem">
+        <div class="footer-top">
+            <div class="footer-card">
+                <h5>External Links</h5>
+                <a href="../pages/about.html" target="_blank" class="top">About</a>
+                <a href="blog-main.html" target="_blank">Blogs</a>
+                <!-- <a href="#">Cases</a> -->
+                <a href="../hire/hire-contact.html" target="_blank">Hire Us</a>
+                <a href="../services/search-engine-optimization.html" target="_blank">SEO</a>
+                <a href="../services/web-development.html" target="_blank">Web Development</a>
+
+            </div>
+            <div class="footer-card">
+                <h5>Contact Us</h5>
+
+                <p class="low-margin">Hisar: +91 8570978316</p>
+                <p>Kurukshetra: +91 9991448836</p>
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@izeera.com" target="_blank">Email us at:
+                    info@izeera.in</a>
+            </div>
+            <div class="footer-card">
+                <h5>Address</h5>
+                <p class="top"> 1). WRXF+23g, National Instuture of Technology, Thanesar, Kurukshetra, Haryana - 136119
+                </p>
+                <p> 2). Guru Jambheshwar University of Science & Tecnnology, Hisar, Haryana - 125001</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyy">All Rights Reserved - iZEERA 2023</p>
+        </div>
+    </footer>
+
+    <script>        var ham = document.getElementById("ham")
+        function showMenu() {
+            ham.style.display = "flex";
+            setTimeout(() => {
+
+                ham.style.transform = 'translateX(0)';
+            }, 200);
+        }
+        function hideMenu() {
+            ham.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                ham.style.display = "none";
+            }, 200);
+        }
+        function home() {
+            window.location.href = "../index.html";
+        }
+    </script>
+</body>
+
+</html>
