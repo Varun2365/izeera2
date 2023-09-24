@@ -7,10 +7,6 @@
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
 }
-body{
-    /* background-color: #0d1a18; */
-
-}
 .hero{
     height: 50vh;
     width: 100%;
@@ -78,7 +74,7 @@ body{
 .journey-right{
     width: 50%;
     height: 50vh;
-    background-image: url(../../../new/about/journey-bg.png);
+    background-image: url(img/journey-bg.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -117,15 +113,15 @@ body{
     margin-bottom: 4rem;
 }
 .grow{
-    background-image: url(../../../new/about/grow.png);
+    background-image: url(img/grow.jpg);
     /* background-size: ; */
 }
 .philos{
-    background-image: url(../../../new/about/philos.png);
+    background-image: url(img/philos.png);
     /* background-size: ; */
 }
 .vision{
-    background-image: url(../../../new/about/vision.png);
+    background-image: url(img/vision.png);
 }
 .padding{
     padding: 0 10rem;
@@ -212,7 +208,7 @@ body{
 .card-left{
     height: 100%;
     width: 30%;
-    background-image: url(../../../new/about/web.jpg);
+    background-image: url(img/web.jpg);
     background-size: cover;
     transition: all 0.2s ease-in-out;
 }
@@ -230,11 +226,11 @@ body{
     text-align: justify;
 }
 .ui{
-    background-image: url(../../../new/about/ui.jpg);
+    background-image: url('img/ui.jpg');
     
 }
 .seo{
-    background-image: url(../../../new/about/seo.jpg);
+    background-image: url(img/seo.jpg);
     background-position: center;
 }
 
